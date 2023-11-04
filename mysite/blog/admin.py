@@ -10,5 +10,7 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     autocomplete_fields = ['author']
     date_hierarchy = 'publish'
-    ordering = ['status', 'publish']
+    ordering = ['status', 'publish'
+
+
 
