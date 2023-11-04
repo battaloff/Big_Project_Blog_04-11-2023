@@ -11,6 +11,3 @@ class PostAdmin(admin.ModelAdmin):
     autocomplete_fields = ['author']
     date_hierarchy = 'publish'
     ordering = ['status', 'publish']
-
-
-
