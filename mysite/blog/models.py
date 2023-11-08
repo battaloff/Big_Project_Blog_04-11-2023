@@ -5,8 +5,7 @@ from django.contrib.auth.models import User
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset() \
-            .filter(status=Posts.Status.PUBLISHED)
+        return super().get_queryset().filter(status=Posts.Status.PUBLISHED)
 
 
 class Posts(models.Model):
@@ -16,7 +15,7 @@ class Posts(models.Model):
 
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
-    body = models.TextField
+    body = models.TextField()
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name='blog_posts')
